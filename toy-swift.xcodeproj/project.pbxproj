@@ -19,6 +19,8 @@
 		1883625E27DF685400ADEF52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1883623327DF685400ADEF52 /* Assets.xcassets */; };
 		18C244F527E20D6A0021C910 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C244F427E20D6A0021C910 /* CircleImage.swift */; };
 		18C244F627E20D6A0021C910 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C244F427E20D6A0021C910 /* CircleImage.swift */; };
+		18C244F927E210550021C910 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C244F827E210550021C910 /* Map.swift */; };
+		18C244FA27E210550021C910 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C244F827E210550021C910 /* Map.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,7 @@
 		1883625527DF685400ADEF52 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		1883625727DF685400ADEF52 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		18C244F427E20D6A0021C910 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		18C244F827E210550021C910 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +151,7 @@
 		18C244F727E20D910021C910 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				18C244F827E210550021C910 /* Map.swift */,
 				18C244F427E20D6A0021C910 /* CircleImage.swift */,
 			);
 			path = Components;
@@ -313,6 +317,7 @@
 			files = (
 				1883625B27DF685400ADEF52 /* ContentView.swift in Sources */,
 				1883625927DF685400ADEF52 /* ToySwiftApp.swift in Sources */,
+				18C244F927E210550021C910 /* Map.swift in Sources */,
 				18C244F527E20D6A0021C910 /* CircleImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,6 +328,7 @@
 			files = (
 				1883625C27DF685400ADEF52 /* ContentView.swift in Sources */,
 				1883625A27DF685400ADEF52 /* ToySwiftApp.swift in Sources */,
+				18C244FA27E210550021C910 /* Map.swift in Sources */,
 				18C244F627E20D6A0021C910 /* CircleImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
