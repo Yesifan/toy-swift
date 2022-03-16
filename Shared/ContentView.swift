@@ -9,18 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Group{
+        VStack(alignment:.leading) {
             Text("Hello, Swift!")
-                .padding()
                 .font(.title)
-                .foregroundColor(.gray)
+            
+            HStack {
+                Text("Joshua Tree National Park")
+                    .font(.subheadline)
+                Spacer()
+                Text("California")
+                    .font(.subheadline)
+            }
         }
+        .padding(.horizontal)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            
     }
 }
