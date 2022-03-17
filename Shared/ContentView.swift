@@ -9,28 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Map().frame(height: 300)
-            CircleImage()
-                .offset(y:-100)
-                .padding(.bottom, -100)
-            VStack(alignment:.leading) {
-                Text("Hello, Swift!")
-                    .font(.title)
-                HStack {
-                    Text("Joshua Tree National Park")
-                        .font(.subheadline)
-                    Spacer()
-                    Text("California")
-                }.foregroundColor(.secondary)
-                
-                Divider()
-                Text("About").font(.title2)
-                Text("It is Amazing!!!")
-            }
-            .padding(.horizontal)
-            Spacer()
-        }
+      LandmarkList()
     }
 }
 
