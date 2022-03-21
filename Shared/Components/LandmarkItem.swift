@@ -16,6 +16,9 @@ struct LandmarkItem: View {
                 .frame(width: 30, height: 30)
             Text(landmark.name)
             Spacer()
+            if landmark.isFavorite {
+                Text("⭐️")
+            }
         }
     }
 }

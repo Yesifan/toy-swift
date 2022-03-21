@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 let path = "landmarkData.json"
 
@@ -29,4 +30,8 @@ func loadLandmarks<T: Decodable>(_ filename: String = path) -> T {
     } catch {
         fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
     }
+}
+
+final class ModelData: ObservableObject {
+    @Published var landmarks: [Landmark] = loadLandmarks(path)
 }

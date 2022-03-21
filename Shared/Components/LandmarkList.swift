@@ -7,33 +7,36 @@
 
 import SwiftUI
 
+struct Filter {
+    var favorite:Bool
+}
+
 struct LandmarkList: View {
-    var landmarks:[Landmark] = loadLandmarks()
+    @EnvironmentObject var modelData: ModelData
+    @State private(set) var filter = Filter(favorite: false)
+    
+    var filteredLandmarks: [Landmark] {
+        modelData.landmarks.filter { landmark in
+            (!filter.favorite || landmark.isFavorite)
+        }
+    }
     
     var body: some View {
         NavigationView {
-            VStack {
-                Image("park")
-                    .resizable()
-                    .frame(height:440)
-                    .ignoresSafeArea(edges:.top)
-                    .padding(.bottom, -400)
-                List(landmarks){
-                    landmark in Group {
-                        NavigationLink {
-                            LandmarkDetail(landmark: landmark)
-                        } label: {
-                            LandmarkItem(landmark: landmark)
-                        }
-                        NavigationLink {
-                            LandmarkDetail(landmark: landmark)
-                        } label: {
-                            LandmarkItem(landmark: landmark)
-                        }
+            List{
+                Toggle(isOn: $filter.favorite) {
+                    Text("Favorites only")
+                }
+
+                ForEach(filteredLandmarks){
+                    landmark in NavigationLink {
+                        LandmarkDetail(landmark: landmark)
+                    } label: {
+                        LandmarkItem(landmark: landmark)
                     }
                 }
-                .navigationTitle("LandMarks")
             }
+            .navigationTitle("LandMarks")
         }
     }
 }
@@ -41,5 +44,6 @@ struct LandmarkList: View {
 struct LandmarkList_Previews: PreviewProvider {
     static var previews: some View {
         LandmarkList()
+            .environmentObject(ModelData())
     }
 }

@@ -9,12 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-      LandmarkList()
+        LandmarkList()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ForEach(["iPhone SE (2nd generation)", "iPhone XS Max"], id: \.self) { deviceName in
+            ContentView()
+                .environmentObject(ModelData())
+                .previewDisplayName(deviceName)
+                .previewDevice(PreviewDevice(rawValue: deviceName))
+        }
     }
 }
